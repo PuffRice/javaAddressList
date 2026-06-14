@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity"
+    android:orientation="vertical"
+    android:layout_padding="16dp"
+    android:background="#e4e4e4">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Signup Page"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        />
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:background="@color/white"
+        android:layout_margin="10dp"
+        android:padding="16dp"
+     >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_marginVertical="@dimen/formFieldMargin"
+            >
+            <TextView
+                android:text="User Id"
+                android:textSize="@dimen/formlabel"
+                />
+            <EditText
+                android:id="@+id/userId"
+                android:inputType="number"
+                android:layout_weight="1"
+                android:hint="Must be 4-6 Digits"
+                android:textSize="@dimen/formfield"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_marginVertical="16dp"
+            >
+            <TextView
+                android:text="User Name"
+                android:textSize="@dimen/formlabel"
+
+                />
+            <EditText
+                android:inputType="text"
+                android:layout_weight="1"
+                android:maxLength="36"
+                android:hint="Max 36 Characters"
+                android:textSize="@dimen/formfield"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_marginVertical="@dimen/formFieldMargin"
+            >
+            <TextView
+                android:text="Email"
+                android:textSize="@dimen/formlabel"
+
+                />
+            <EditText
+                android:layout_width="200dp"
+                android:inputType="textEmailAddress"
+                android:layout_weight="1"
+                android:hint="abc@xyz.com"
+                android:textSize="@dimen/formfield"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_marginVertical="@dimen/formFieldMargin"
+            >
+            <TextView
+                android:text="Phone"
+                android:textSize="@dimen/formlabel"
+                android:layout_marginRight="30dp"
+                />
+            <EditText
+                android:layout_width="200dp"
+                android:inputType="phone"
+                android:layout_weight="1"
+                android:hint="Must be Valid"
+                android:textSize="32dp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_marginVertical="@dimen/formFieldMargin"
+            >
+            <TextView
+                android:text="Password"
+                android:textSize="@dimen/formlabel"
+                android:layout_marginRight="30dp"
+                />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="200dp"
+                android:inputType="textPassword"
+                android:layout_weight="1"
+                android:hint="Min. 8 Characters"
+                android:textSize="32dp"
+                />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_marginVertical="@dimen/formFieldMargin"
+            >
+            <TextView
+                android:text="Reenter Password"
+                android:textSize="@dimen/formlabel"
+                android:layout_marginRight="30dp"
+                />
+            <EditText
+                android:id="@+id/passwordreentry"
+                android:layout_width="200dp"
+                android:inputType="textPassword"
+                android:layout_weight="1"
+                android:hint="Min. 8 Characters"
+                android:textSize="32dp"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:padding="16dp"
+        >
+
+        <CheckBox
+            android:id="@+id/userRememberCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember User"
+            android:textSize="32dp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="16dp"
+        android:layout_margin="20dp"
+        android:padding="16dp">
+
+        <CheckBox
+            android:id="@+id/loginRememberCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember Login"
+            android:textSize="32dp"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="32dp"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Already Have Account?"
+        android:textStyle="bold"
+        android:layout_margin="24dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="24dp">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Exit"
+            android:backgroundTint="#ff0d45"
+            android:textSize="36dp">
+
+        </Button>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Go"
+            android:textSize="36dp">
+
+        </Button>
+    </LinearLayout>
+
+
+
+</LinearLayout>
